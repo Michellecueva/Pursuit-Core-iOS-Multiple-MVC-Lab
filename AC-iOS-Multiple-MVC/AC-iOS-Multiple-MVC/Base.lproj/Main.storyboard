@@ -50,7 +50,7 @@
                                     <outlet property="animalImage" destination="EhM-U0-HuH" id="9QF-4f-GvO"/>
                                     <outlet property="nameLabel" destination="NOY-0S-0yd" id="ReL-hH-yKf"/>
                                     <outlet property="originLabel" destination="PWH-BX-Bb0" id="FxK-l0-2ck"/>
-                                    <segue destination="Hy2-M1-W3K" kind="show" id="WB4-Na-nvH"/>
+                                    <segue destination="Hy2-M1-W3K" kind="show" identifier="animalSegue" id="WB4-Na-nvH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -65,20 +65,46 @@
             </objects>
             <point key="canvasLocation" x="913.04347826086962" y="24.776785714285712"/>
         </scene>
-        <!--View Controller-->
+        <!--Animal Detail View Controller-->
         <scene sceneID="Jhf-z6-Hfs">
             <objects>
-                <viewController id="Hy2-M1-W3K" sceneMemberID="viewController">
+                <viewController id="Hy2-M1-W3K" customClass="AnimalDetailViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aev-RN-Epb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3jC-sn-n6O">
+                                <rect key="frame" x="87" y="137" width="240" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GXT-aZ-9Lj">
+                                <rect key="frame" x="87" y="384" width="240" height="308"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZX-U8-0Fl">
+                                <rect key="frame" x="144" y="315" width="127" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UMu-41-rOx"/>
                     </view>
+                    <connections>
+                        <outlet property="bigAnimalImage" destination="3jC-sn-n6O" id="ifT-ZF-z1C"/>
+                        <outlet property="descriptionLabel" destination="GXT-aZ-9Lj" id="ZS4-yf-3ML"/>
+                        <outlet property="nameLabel" destination="IZX-U8-0Fl" id="bov-Gg-zQt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w2P-fk-p12" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823" y="25"/>
+            <point key="canvasLocation" x="1821.7391304347827" y="24.776785714285712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EH9-6W-5xk">
