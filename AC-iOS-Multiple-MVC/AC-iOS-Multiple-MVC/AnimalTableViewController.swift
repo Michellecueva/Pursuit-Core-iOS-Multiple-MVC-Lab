@@ -39,6 +39,8 @@ class AnimalTableViewController: UITableViewController {
             cell.nameLabel.text = animal.name
             cell.originLabel.text = animal.origin
             cell.animalImage.image = UIImage(named: String(animal.imageNumber))
+            
+            return cell
         }
 
     
@@ -49,6 +51,24 @@ class AnimalTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
         
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Mammals"
+        case 1:
+            return "Amphibian"
+        case 2:
+            return "Reptile"
+        case 3:
+            return "Insect"
+        case 4:
+            return "Bird"
+        default:
+            return "Shouldn't appear"
+           
+        }
     }
 
     /*

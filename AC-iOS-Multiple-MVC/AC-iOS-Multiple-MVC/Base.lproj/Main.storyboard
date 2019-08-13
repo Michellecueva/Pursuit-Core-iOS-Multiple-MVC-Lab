@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Animal Table View Controller-->
+        <!--Main-->
         <scene sceneID="Sok-B5-MWE">
             <objects>
                 <tableViewController id="0sh-m3-ELn" customClass="AnimalTableViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                                     <outlet property="animalImage" destination="EhM-U0-HuH" id="9QF-4f-GvO"/>
                                     <outlet property="nameLabel" destination="NOY-0S-0yd" id="ReL-hH-yKf"/>
                                     <outlet property="originLabel" destination="PWH-BX-Bb0" id="FxK-l0-2ck"/>
-                                    <segue destination="Hy2-M1-W3K" kind="show" identifier="animalSegue" id="WB4-Na-nvH"/>
+                                    <segue destination="Hy2-M1-W3K" kind="show" identifier="animalSegue" id="lu1-ig-OsL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -59,7 +59,7 @@
                             <outlet property="delegate" destination="0sh-m3-ELn" id="L2q-Zl-7kw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="h2L-oo-c95"/>
+                    <navigationItem key="navigationItem" title="Main" id="h2L-oo-c95"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lW2-uT-wk2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
