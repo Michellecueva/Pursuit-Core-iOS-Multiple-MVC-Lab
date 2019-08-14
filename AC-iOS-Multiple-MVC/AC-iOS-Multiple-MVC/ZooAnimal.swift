@@ -32,7 +32,7 @@ The Aardvark is also not related to the South American anteater, despite sharing
         ZooAnimal(name: "African Elephant", imageNumber: 2, origin: "Africa", classification: "Mammal", info: """
 African Elephants The African elephant, (Loxodonta Africana), is also known as the ‘African Bush Elephant’. Both the African Bush Elephant and the African Forest Elephant have usually been classified as a single species, known simply as the African Elephant. However, the African Forest Elephant resides in the Rainforests and the African Bush Elephant lives in the savannas, hence sometimes being called the ‘Savanna Elephant’.
 """),
-        ZooAnimal(name: "Anaconda Snake", imageNumber: 3, origin: "South America", classification: "Amphibian", info: """
+        ZooAnimal(name: "Anaconda Snake", imageNumber: 3, origin: "South America", classification: "Reptile", info: """
 Anacondas are four species of aquatic boa inhabiting the swamps and rivers of the dense forests of tropical South America. The Yellow Anaconda can be found as far south as Argentina. It is unclear how the name originated so far from the snakes native habitat. It is likely due to its vague similarity to the large Asian pythons.
 
 Local names for the Anaconda in South America include the Spanish term ‘matatoro’, meaning ‘bull killer’, and the Native American terms ‘sucuri’ and ‘yakumama’. Anacondas as members of the boa family are sometimes called ‘water boas’. The Latin name for Anaconda is ‘Eunectes’ meaning ‘good swimmer’.
@@ -130,16 +130,14 @@ Zebras were the second species to diverge from the earliest proto-horses, after 
     
     
     static let mammal = zooAnimals.filter({$0.classification == "Mammal"})
-    static let amphibian = zooAnimals.filter({$0.classification == "Amphibian" })
     static let reptile = zooAnimals.filter({$0.classification == "Reptile"})
     static let insect = zooAnimals.filter({$0.classification == "Insect"})
-    static let bird = zooAnimals.filter({$0.classification == "Insect"})
+    static let bird = zooAnimals.filter({$0.classification == "Bird"})
     
     static let allAnimals = getAllanimals()
     
     static func getAllanimals() -> [[ZooAnimal]] {
         return [ ZooAnimal.mammal,
-                 ZooAnimal.amphibian,
                  ZooAnimal.reptile,
                  ZooAnimal.insect,
                  ZooAnimal.bird

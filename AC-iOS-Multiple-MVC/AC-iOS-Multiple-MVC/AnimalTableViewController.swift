@@ -21,7 +21,7 @@ class AnimalTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 5
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,13 +58,11 @@ class AnimalTableViewController: UITableViewController {
         case 0:
             return "Mammals"
         case 1:
-            return "Amphibian"
+            return "Reptiles"
         case 2:
-            return "Reptile"
+            return "Insects"
         case 3:
-            return "Insect"
-        case 4:
-            return "Bird"
+            return "Birds"
         default:
             return "Shouldn't appear"
            
